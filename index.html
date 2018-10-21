@@ -1,0 +1,136 @@
+<!DOCTYPE html>-
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="Res/favicon.ico">
+	<title>
+		
+		Excelsior - Globe-Ally
+
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/toolkit.css">
+	<link rel="stylesheet" type="text/css" href="css/application.css">
+	<link href="css/toolkit-startup.css" rel="stylesheet">
+    <link href="css/application-startup.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/chatbot.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <style type="text/css">
+    	
+		.back, body {
+			background-color: black;
+		}
+		
+		.align {
+			margin-left: 12.5%;
+		}
+
+		.card {
+			width: 250px;
+			height: 185px;
+			margin-bottom: 10px;
+		}
+		
+		.design {
+			text-decoration-color: black;
+		}
+    </style>
+</head>
+<body>
+
+	
+	<div class="stage back" id="stage">
+
+	<div class="block block-inverse  app-header">
+	
+	  <div class="container fixed-top app-navbar">
+	  <nav class="navbar navbar-transparent navbar-padded navbar-toggleable-sm">
+	    <button
+	      class="navbar-toggler navbar-toggler-right hidden-md-up"
+	      type="button"
+	      data-target="#stage"
+	      data-toggle="stage"
+	      data-distance="-250">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+
+	    <a class="navbar-brand mr-auto" href="index.html">
+	      <strong style="background: #fff; padding: 12px; border-radius: 4px; color: #28669F;">Excelsior</strong>
+	    </a>
+
+	    <div class="hidden-sm-down text-uppercase">
+	      <ul class="navbar-nav">
+	        <li class="nav-item px-1 ">
+	          <a class="nav-link" href="mosquito.html">Health</a>
+	        </li>
+	        <li class="nav-item px-1">
+	          <a class="nav-link" href="deforest_map.html">Forest Cover</a>
+	        </li>
+	        <li class="nav-item px-1 ">
+	          <a class="nav-link" href="solar.html">Solar</a>
+	        </li>
+	        <li class="nav-item px-1 ">
+	          <a class="nav-link" href="Amoeba/index.html">Crop yield</a>
+	        </li>
+	        <li class="nav-item px-1">
+	          <a class="nav-link" href="examples/BlueMarbleTimeSeries.html">Globe</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </nav>
+	</div>
+	</div>
+	
+
+	
+	<br>
+
+	<div class="container text-center">
+	<div class="row app-marketing-grid">
+        <div class="col-lg-3 px-4 mb-5">
+          <img class="mb-1 card" src="Res/mosquito.jpg">
+          <p><strong class="text-dark larger"><a href="mosquito.html">Health</a></strong><p class="text-dark">Mosquitos have given humans a hard time being carriers of diseases like Dengue and Zika! We have used the Nasa Hydrosphere dataset to predict the habitat map of mosquitos and the potential threat they pose</p></p>
+        </div>
+        <div class="col-lg-3 px-4 mb-5">
+          <img class="mb-1 card" src="Res/deforest.jpg">
+          <p><strong class="text-dark larger"><a href="deforest_map.html">Forest Cover</a></strong><p class="text-dark"> When analyzing data from Nasa's data we found that apart from urbanisation, one of the major causes of preventable deforestation are <strong>forest fires! </strong>So, we have used forest cover data to predict the extent of damage and then some preventive measures that help prevent them.</p></p>
+        </div>
+        <div class="col-lg-3 px-4 mb-5">
+          <img class="mb-1 card" src="Res/solar.jpg">
+          <p><strong class="text-dark larger"><a href="solar.html">Solar</a></strong><p class="text-dark">Solar energy has always been an underused energy resource. We have used cloud cover, precipitation and water vapour cover to predict the efficiency of solar panels. The calculator helps people calculate their daily requirements and enable them to switch to renewable sources</p></p>
+        </div>
+        <div class="col-lg-3 px-4 mb-5">
+          <img class="mb-1 card" src="Res/irrigation.jpg">
+          <p><strong class="text-dark larger"><a href="irrigate.html">Crop Yield</a></strong><p class="text-dark">Visualizing countries based on their maximum cash crop production capacity. The highest ones being corn, rice, wheat and potatoes</p></p>
+        </div>
+      </div>
+	</div>	
+	
+
+	<br><br>
+	<div class="text-right">
+		<div>
+		<iframe class="rounded-div align" 
+    		allow="microphone;"
+    		width="350"
+    		height="430"
+    		src="https://console.dialogflow.com/api-client/demo/embedded/ef72bd43-1384-4039-82db-93248886ba0a">
+		</iframe>
+		</div>
+	</div>
+
+	<div class="back">
+		<br><br><br><br>
+	</div>
+	<script src="scripts/jquery.min.js"></script>    
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/chart.js"></script>
+    <script src="scripts/toolkit.js"></script>
+    <script src="scripts/application.js"></script>
+
+</body>
+</html>

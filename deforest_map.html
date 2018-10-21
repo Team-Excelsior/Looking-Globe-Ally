@@ -1,0 +1,153 @@
+<html>
+    <head>
+    <title>
+        
+        Excelsior - Globe-Ally
+
+    </title>
+    <link rel="shortcut icon" type="image/png" href="Res/favicon.ico">
+    <script src="http://d3js.org/d3.v2.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dash-css.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="res/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/toolkit.css">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+    <link href="css/toolkit-startup.css" rel="stylesheet">
+    <link href="css/application-startup.css" rel="stylesheet">
+
+    <style type="text/css">
+        
+        .center {
+            margin-left: 20.5% !important;
+        }
+
+        .back {
+            background: linear-gradient(to top, rgba(255,255,255,1), rgba(0,0,0,1));
+        }
+
+        .stylized {
+            font-size: 1.15em;
+            text-decoration-color: white !important;
+            margin-left: 25%;
+        }
+
+        .head1 {
+            text-decoration-color: white !important;
+            text-align: center !important;
+            font-size: 2.25em;
+
+        }
+
+        .head2 {
+            margin-left: 23%;
+            font-size: 1.25em;
+
+        }
+
+    </style>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+   
+        google.charts.load('current', {
+            'packages':['geochart'],
+            
+            'mapsApiKey': 'AIzaSyC0lCygOVbKnHtE7D_r7CzvgPSmsTPRMo4'
+        });
+        google.charts.setOnLoadCallback(drawMarkersMap);
+
+        function drawMarkersMap() {
+             var data = google.visualization.arrayToDataTable([
+            ['City',   'P(Fire)'],
+            ['Sweden',      0.85],
+            ['Portugal',     0.72],
+            ['Madagascar',    0.54],
+            ['RU',     0.48],
+            ['Canada',   0.33]
+            ]);
+
+            var options = {
+            colorAxis: {colors: ['green', 'blue']}
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+            chart.draw(data, options);
+        }
+              
+    </script>
+
+  </head>
+  <body class="back">
+    
+    <div class="stage back image" id="stage">
+
+      <div class="container py-4 fixed-top app-navbar">
+      <nav class="navbar navbar-transparent navbar-padded navbar-toggleable-sm">
+        <button
+          class="navbar-toggler navbar-toggler-right hidden-md-up"
+          type="button"
+          data-target="#stage"
+          data-toggle="stage"
+          data-distance="-250">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    
+        <a class="navbar-brand mr-auto grad" href="index.html">
+
+          <strong style= "text-decoration-color: white; font-size: 1.5em; padding: 12px; border-radius: 4px">Excelsior</strong>
+        </a>
+
+    <div class="hidden-sm-down text-uppercase grad1">
+      <ul class="navbar-nav">
+        <li class="nav-item px-1 ">
+              <a class="nav-link" href="mosquito.html">Health</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="deforest_map.html">Forest Cover</a>
+            </li>
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="solar.html">Solar</a>
+            </li>
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="irrigate.html">Crop yield</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="examples/BlueMarbleTimeSeries.html">Globe</a>
+            </li>
+      </ul>
+    </div>
+      </nav>
+    </div>
+
+<br>
+<br><br><br><br><br>
+
+    <div id="regions_div" class="center" style="width: 900px; height: 500px ;">
+        
+    </div>
+    <div class="container center">
+        <br>
+        <p class="stylized">Forest cover most prone to destruction</p>
+    </div>
+    <br><br><br><br>
+    <hr>
+    <div class="container">
+        <h2 class="head1">Visualization Dashboard</h2>
+        <p class="head2">This dashboard makes it easier to visualize forest cover that is susceptible to harm from forest fires. Our Deep Learning model that uses a 'selu' (scaled exponential linear unit) activation function to correctly predict the probability of occurence of forest fires. We found out that forest fires are the most common preventable and controllable cause for deforestation.</p>
+    </div>
+    <br>
+    <script type="text/javascript" src="scripts/dash-js.js"></script> 
+    <div class="container center">
+        <div id="pieChart"></div>
+        <div id="barChart"></div>  
+        <!-- <div id="lineChart"></div> -->
+    </div>
+    <div class="container">
+        <br><br><br><br>
+    </div>
+    </body>
+    <script type="text/javascript" src="scripts/dash-js.js"></script> 
+
+</html>
